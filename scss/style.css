@@ -156,20 +156,25 @@
 }
 
 .pluses_product-list_item::before {
-  content: "";
+  content: "+";
   display: block;
   width: 35px;
   height: 35px;
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../img/plus_icon.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #445161;
+  color: #fff;
+  text-align: center;
+  font-size: 34px;
+  line-height: 35px;
 }
 
 .pluses_product-list_item:nth-child(1), .pluses_product-list_item:nth-child(3), .pluses_product-list_item:nth-child(5) {
   margin-right: 35px;
+}
+
+.pluses_product-list_item:last-child, .pluses_product-list_item:nth-child(5) {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
