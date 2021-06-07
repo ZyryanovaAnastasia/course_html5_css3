@@ -13,7 +13,6 @@
 }
 
 .main_header {
-    width: 100%;
     background: #445161;
     padding: 25px 50px 19px 50px;
     box-sizing: border-box;
@@ -49,7 +48,7 @@
         width: 16px;
         height: 13px;
         position: absolute;
-        top: 0;
+        top: 4px;
         left: 0;
         background-image: url(../img/check_mark.svg);
         background-size: contain;
@@ -109,7 +108,7 @@
 
 .pluses_product {
     background: #F5F5F5;
-    padding: 25px 50px 50px;
+    padding: 25px 16px 14px 50px;
     box-sizing: border-box;
 
     &-title {
@@ -130,7 +129,7 @@
 
     &-list_item {
         width: 568px;
-        margin: 0 0 33px 0;
+        margin: 0 35px 33px 0;
         position: relative;
         padding-left: 45px;
         box-sizing: border-box;
@@ -149,19 +148,48 @@
         text-align: center;
         font-size: 34px;
         line-height: 35px
-        // background-image: url(../img/plus_icon.svg);
-        // background-size: contain;
-        // background-repeat: no-repeat;
-        // background-position: center;
+    }
+}
+
+.screenshots {
+    padding: 25px 50px 23px 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-title {
+        font-size: 30px;
+        line-height: 36px;
+        align-items: center;
+        color: #445161;
+        text-align: center;
+        width: 100%;
+        margin: 0 0 45px 0;
+    } 
+
+    &-item {
+        width: 575px;
+        display: flex;
+        margin: 0 0 27px 0;
     }
 
-    // не нашла решение как адекватнее сделать
-    &-list_item:nth-child(1), &-list_item:nth-child(3), &-list_item:nth-child(5) {
-        margin-right: 35px;
+    &-item_img {
+        width: 202px;
+        height: 153px;
+        background: #445161;
+        margin: 0 14px 0 0;
     }
 
-    &-list_item:last-child, &-list_item:nth-child(5){
-        margin-bottom: 0;
+    &-item_title {
+        font-size: 24px;
+        line-height: 30px;
+        color: #445161;
+        margin: 0 0 13px 0;
     }
 
+    &-item_text {
+        font-size: 16px;
+        color: #333333;
+    }
 }
