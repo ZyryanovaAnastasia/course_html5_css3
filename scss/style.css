@@ -119,4 +119,57 @@
   height: 245px;
   background: #445161;
 }
+
+.pluses_product {
+  background: #F5F5F5;
+  padding: 25px 50px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pluses_product-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #445161;
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+
+.pluses_product-list {
+  list-style-position: inside;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pluses_product-list_item {
+  width: 568px;
+  margin: 0 0 33px 0;
+  position: relative;
+  padding-left: 45px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pluses_product-list_item::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/plus_icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pluses_product-list_item:nth-child(1), .pluses_product-list_item:nth-child(3), .pluses_product-list_item:nth-child(5) {
+  margin-right: 35px;
+}
 /*# sourceMappingURL=style.css.map */
