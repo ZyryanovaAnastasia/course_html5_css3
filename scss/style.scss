@@ -7,18 +7,17 @@
   }
 
 .container {
-    padding: 0 50px;
-}
-
-.header_container {
-    background: #445161;
-    padding: 25px 0 19px 0;
-    box-sizing: content-box
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .main_header {
+    width: 100%;
+    background: #445161;
+    padding: 25px 50px 19px 50px;
+    box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 
     &-title {
@@ -52,7 +51,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(img/check_mark.svg);
+        background-image: url(../img/check_mark.svg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -66,5 +65,44 @@
         width: 472px;
         height: 217px;
         background: #FFFFFF;
+    }
+}
+
+.about_product {
+    padding: 45px 50px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-title {
+        font-size: 30px;
+        line-height: 36px;
+        align-items: center;
+        color: #445161;
+        margin: 0 0 17px 0;
+    }
+
+    &-text {
+        font-size: 16px;
+        line-height: 24px;
+        align-items: center;
+        color: #333333;
+        max-width: 646px;
+    }
+
+    &-text:last-child {
+        margin-top: 11px;
+    }
+
+    // Почему то не применяются слили для первого элемента
+    // &-text:first-child {
+    //     margin-bottom: 11px;
+    // }
+
+    &-photo {
+        width: 430px;
+        height: 245px;
+        background: #445161;
     }
 }
