@@ -4,6 +4,8 @@
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container {
@@ -15,8 +17,6 @@
 .main_header {
   background: #445161;
   padding: 25px 50px 19px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,8 +47,6 @@
   margin-bottom: 10px;
   position: relative;
   padding-left: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .main_header-list_item::before {
@@ -77,8 +75,6 @@
 
 .about_product {
   padding: 45px 50px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,8 +118,6 @@
 .pluses_product {
   background: #F5F5F5;
   padding: 25px 16px 14px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .pluses_product-title {
@@ -150,8 +144,6 @@
   margin: 0 35px 33px 0;
   position: relative;
   padding-left: 45px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .pluses_product-list_item::before {
@@ -171,8 +163,6 @@
 
 .screenshots {
   padding: 25px 50px 23px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,8 +215,6 @@
 .reviews {
   background: #F5F5F5;
   padding: 25px 50px 42px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,8 +251,6 @@
 .reviews-item_text {
   padding: 16px 10px 5px 15px;
   margin: 0 0 22px 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   background: #EBEBEB;
   border-radius: 5px;
   font-family: Roboto;
@@ -298,8 +284,6 @@
 
 .prices {
   padding: 45px 50px 36px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,8 +306,6 @@
 .prices-item {
   width: 300px;
   margin: 0 45px 0 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -ms-flex-item-align: end;
       align-self: flex-end;
   background: #445161;
@@ -351,8 +333,6 @@
   color: #445162;
   background: #FFFFFF;
   border: 2px solid #445162;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding: 25px 0 16px 0;
 }
 
