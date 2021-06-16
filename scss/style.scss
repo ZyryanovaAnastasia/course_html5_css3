@@ -26,13 +26,6 @@ ul {
     list-style-type: none;
 }
 
-section {
-    padding-top: 25px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-}
-
 %title_h2 {
     font-size: 30px;
     line-height: 36px;
@@ -59,7 +52,7 @@ section {
 
 
 .main_header {
-    background: #445161;
+    background: $dark_background;
     padding: 25px 50px 19px 50px;
     display: flex;
     justify-content: space-between;
@@ -100,8 +93,7 @@ section {
 }
 
 .about_product {
-    // padding: 45px 50px 50px;
-    padding-top: 45px;
+    padding: 45px 50px 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -129,6 +121,7 @@ section {
 
 .pluses_product {
     background: $light_background;
+    padding: 25px 50px 14px 50px;
 
     &-title {
         @extend %title_h2;
@@ -148,12 +141,6 @@ section {
         padding-left: 45px;
     }
 
-
-    &-list_item:nth-of-type(5), 
-    &-list_item:nth-of-type(6) {
-        margin: 0 0 0 0;
-    }
-
     &-list_item::before {
         @include content_before(35px, 35px);
         content: "+";
@@ -166,6 +153,7 @@ section {
 }
 
 .screenshots {
+    padding: 25px 50px 23px 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -179,11 +167,6 @@ section {
         width: 575px;
         display: flex;
         margin: 0 0 27px 0;
-    }
-
-    &-item:nth-of-type(3), 
-    &-item:nth-of-type(4) {
-        margin: 0 0 0 0;
     }
 
     &-item_img {
@@ -210,6 +193,7 @@ section {
     }
 
     background: $light_background;
+    padding: 25px 50px 20px 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -223,11 +207,6 @@ section {
         width: 568px;
         display: flex;
         margin: 0 0 22px 0;
-    }
-
-    &-item:nth-of-type(3), 
-    &-item:nth-of-type(4) {
-        margin: 0 0 0 0;
     }
 
     &-item_img {
@@ -263,7 +242,7 @@ section {
 }
 
 .prices {
-    padding-top: 45px;   
+    padding: 45px 50px 36px 50px;  
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
