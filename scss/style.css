@@ -221,4 +221,239 @@
   font-size: 16px;
   color: #333333;
 }
+
+.reviews {
+  background: #F5F5F5;
+  padding: 25px 50px 42px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.reviews-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #445161;
+  width: 100%;
+  margin: 0 0 29px 0;
+}
+
+.reviews-item {
+  width: 568px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews-item_img {
+  background: #445161;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+
+.reviews-item_text {
+  padding: 16px 10px 5px 15px;
+  margin: 0 0 22px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #EBEBEB;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  font-style: italic;
+  position: relative;
+}
+
+.reviews-item_text::before {
+  content: "";
+  border: 10px solid transparent;
+  border-right: 15px solid #EBEBEB;
+  position: absolute;
+  top: 40px;
+  left: -25px;
+}
+
+.reviews-item_label {
+  display: block;
+  margin: 10px 0 0 0;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 18px;
+  color: #989898;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.prices {
+  padding: 45px 50px 36px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.prices-title {
+  width: 100%;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #445161;
+  margin: 0 0 26px 0;
+}
+
+.prices-item {
+  width: 300px;
+  margin: 0 45px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background: #445161;
+  border-radius: 5px;
+}
+
+.prices-item:last-child {
+  margin: 0 0 0 0;
+}
+
+.prices-item_title {
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 14px 0 8px 0;
+}
+
+.prices-item_price {
+  display: block;
+  width: 100%;
+  font-size: 40px;
+  line-height: 30px;
+  text-align: center;
+  color: #445162;
+  background: #FFFFFF;
+  border: 2px solid #445162;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 25px 0 16px 0;
+}
+
+.prices-list {
+  list-style-position: inside;
+  margin: 8px 8px 16px 20px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.prices-button {
+  background: #FFFFFF;
+  width: 262px;
+  padding: 16px 0 9px 0;
+  margin: 14px 19px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #445161;
+  border-radius: 7px;
+  border: none;
+}
+
+.main_footer-contacts {
+  background: #445162;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_footer-title {
+  width: 100%;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 25px 0 43px 0;
+}
+
+.main_footer-form {
+  margin: 0 45px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 503px;
+}
+
+.main_footer-form_input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #445162;
+  padding: 10px 0 6px 10px;
+  margin: 0 0 18px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.main_footer-form_message {
+  font-size: 16px;
+  line-height: 24px;
+  color: #445162;
+  padding: 10px 0 6px 10px;
+  height: 173px;
+  border-radius: 5px;
+  margin: 0 0 18px 0;
+}
+
+.main_footer-form_submit {
+  width: 143px;
+  padding: 12px 0 7px 0;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 0 61px 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #445162;
+  border-radius: 5px;
+  border: none;
+  background: #fff;
+}
+
+.main_footer-copy {
+  background: #F5F5F5;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: #445162;
+  padding: 13px 0;
+}
 /*# sourceMappingURL=style.css.map */
