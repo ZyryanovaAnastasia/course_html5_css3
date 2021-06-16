@@ -1,5 +1,6 @@
 $dark_background: #445162;
-$light_dark_background: lighten($dark_background, 35%);
+$light_background: #F5F5F5;
+$lighten_dark_background: lighten($dark_background, 35%);
 
 * {
     margin: 0;
@@ -11,12 +12,25 @@ $light_dark_background: lighten($dark_background, 35%);
     font-size: 16px;
     line-height: 24px;
     color: #333333;
+    text-decoration: none;
 }
 
 .container {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+section {
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
 }
 
 %title_h2 {
@@ -26,6 +40,23 @@ $light_dark_background: lighten($dark_background, 35%);
     width: 100%;
     text-align: center;
 }
+
+@mixin content_before($width:0, $height:0, $top:0, $left:0) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: $width;
+    height: $height;
+    top: $top;
+    left: $left;
+}
+
+@mixin background_img($url_img) {
+    background-image: url($url_img);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 .main_header {
     background: #445161;
@@ -43,9 +74,6 @@ $light_dark_background: lighten($dark_background, 35%);
     &-list {
         font-size: 20px;
         line-height: 23px;
-        align-items: center;
-        list-style-position: inside;
-        list-style-type: none;
     }
    
     &-list_item {
@@ -56,22 +84,13 @@ $light_dark_background: lighten($dark_background, 35%);
     }
 
     &-list_item::before {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 13px;
-        position: absolute;
-        top: 4px;
-        left: 0;
-        background-image: url(../img/check_mark.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include content_before(16px, 13px, 4px);
+        @include background_img('../img/check_mark.svg')
     }
 
     &-list_item:last-child {
         margin: 0;
-      }
+    }
 
     &-photo {
         width: 472px;
@@ -81,7 +100,8 @@ $light_dark_background: lighten($dark_background, 35%);
 }
 
 .about_product {
-    padding: 45px 50px 50px;
+    // padding: 45px 50px 50px;
+    padding-top: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -103,13 +123,12 @@ $light_dark_background: lighten($dark_background, 35%);
     &-photo {
         width: 430px;
         height: 245px;
-        background: #445161;
+        background: $dark_background;
     }
 }
 
 .pluses_product {
-    background: #F5F5F5;
-    padding: 25px 16px 14px 50px;
+    background: $light_background;
 
     &-title {
         @extend %title_h2;
@@ -117,29 +136,28 @@ $light_dark_background: lighten($dark_background, 35%);
     }
 
     &-list {
-        list-style-position: inside;
-        list-style-type: none;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     &-list_item {
         width: 568px;
-        margin: 0 35px 33px 0;
+        margin: 0 0 35px 0;
         position: relative;
         padding-left: 45px;
-        
+    }
+
+
+    &-list_item:nth-of-type(5), 
+    &-list_item:nth-of-type(6) {
+        margin: 0 0 0 0;
     }
 
     &-list_item::before {
+        @include content_before(35px, 35px);
         content: "+";
-        display: block;
-        width: 35px;
-        height: 35px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #445161;
+        background-color: $dark_background;
         color: #fff;
         text-align: center;
         font-size: 34px;
@@ -148,7 +166,6 @@ $light_dark_background: lighten($dark_background, 35%);
 }
 
 .screenshots {
-    padding: 25px 50px 23px 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -164,10 +181,15 @@ $light_dark_background: lighten($dark_background, 35%);
         margin: 0 0 27px 0;
     }
 
+    &-item:nth-of-type(3), 
+    &-item:nth-of-type(4) {
+        margin: 0 0 0 0;
+    }
+
     &-item_img {
         width: 202px;
         height: 153px;
-        background: #445161;
+        background: $dark_background;
         margin: 0 14px 0 0;
     }
 
@@ -180,8 +202,14 @@ $light_dark_background: lighten($dark_background, 35%);
 }
 
 .reviews {
-    background: #F5F5F5;
-    padding: 25px 50px 42px 50px;
+    %reviews_text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        font-style: italic;
+    }
+
+    background: $light_background;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -194,52 +222,48 @@ $light_dark_background: lighten($dark_background, 35%);
     &-item {
         width: 568px;
         display: flex;
+        margin: 0 0 22px 0;
+    }
+
+    &-item:nth-of-type(3), 
+    &-item:nth-of-type(4) {
+        margin: 0 0 0 0;
     }
 
     &-item_img {
-        background: #445161;
+        background: $dark_background;
         width: 66px;
         height: 66px;
         border-radius: 50%;
     }
 
     &-item_text {
+        @extend %reviews_text;
         padding: 16px 10px 5px 15px;
-        margin: 0 0 22px 15px;
+        margin: 0 0 0 15px;
         background: #EBEBEB;
         border-radius: 5px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        line-height: 18px;
         color: #000000;
-        font-style: italic;
         position: relative;
     }
 
     &-item_text::before {
-        content: "";
+        @include content_before(0, 0, 40px, -25px);
         border: 10px solid transparent;	
         border-right: 15px solid #EBEBEB;
-        position: absolute;
-        top: 40px;
-        left: -25px;
     }
 
     &-item_label {
+        @extend %reviews_text;
         display: block;
         margin: 10px 0 0 0;
         width: 100%;
-        font-family: 'Roboto', sans-serif;
-        font-size: 14px;
-        line-height: 18px;
         color: #989898;
-        font-style: italic;
-        text-decoration: none;
     }
 }
 
 .prices {
-    padding: 45px 50px 36px 50px;    
+    padding-top: 45px;   
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -253,7 +277,7 @@ $light_dark_background: lighten($dark_background, 35%);
         width: 300px;
         margin: 0 45px 0 0;
         align-self: flex-end;
-        background: #445161;
+        background: $dark_background;
         border-radius: 5px;
     }
 
@@ -271,11 +295,9 @@ $light_dark_background: lighten($dark_background, 35%);
 
     &-item_price {
         display: block;
-        width: 100%;
         font-size: 40px;
         line-height: 30px;
         text-align: center;
-        color: #445162;
         background: #FFFFFF;
         border: 2px solid #445162;
         padding: 25px 0 16px 0;
@@ -304,7 +326,7 @@ $light_dark_background: lighten($dark_background, 35%);
     }
 
     &-button:hover {
-        background-color: $light_dark_background;
+        background-color: $lighten_dark_background;
         color: #fff;
     }
 
@@ -316,12 +338,13 @@ $light_dark_background: lighten($dark_background, 35%);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 25px 50px 60px 50px;
     }
 
     &-title {
         @extend %title_h2;
         color: #FFFFFF;
-        padding: 25px 0 43px 0;
+        padding: 0 0 43px 0;
     }
 
     &-form {
@@ -356,7 +379,7 @@ $light_dark_background: lighten($dark_background, 35%);
     &-form_input:hover, 
     &-form_message:hover,
     &-form_submit:hover {
-        background-color: $light_dark_background;
+        background-color: $lighten_dark_background;
         color: #fff;
     }
 
@@ -372,7 +395,6 @@ $light_dark_background: lighten($dark_background, 35%);
         border-radius: 5px;
         background: #fff;
         text-align: center;
-        margin: 0 0 61px 0;
         font-weight: bold;
         text-transform: uppercase;
         color: #445162;
@@ -388,7 +410,6 @@ $light_dark_background: lighten($dark_background, 35%);
         margin: 0 0 20px 0;
         padding: 0 0 0 30px;
         position: relative;
-        text-decoration: none;
         color: #FFFFFF;
     }
 
@@ -397,16 +418,8 @@ $light_dark_background: lighten($dark_background, 35%);
     }
 
     &-link:before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include content_before(20px, 20px);
+        @include background_img('');
     }
       
     &-link:nth-of-type(1)::before  {
@@ -426,7 +439,7 @@ $light_dark_background: lighten($dark_background, 35%);
     }
 
     &-link:hover {
-        color: $light_dark_background;
+        color: $lighten_dark_background;
     }
     
     &-social_logo {
@@ -437,8 +450,7 @@ $light_dark_background: lighten($dark_background, 35%);
     &-social_logo-net {
         width: 51px;
         height: 51px;
-        background-position: center;
-        background-repeat: no-repeat;
+        @include background_img('');
     }
 
     &-social_logo-net:nth-of-type(1)  {
@@ -457,13 +469,12 @@ $light_dark_background: lighten($dark_background, 35%);
         background-image: url(../img/facebook.svg);
     }
 
-    &-copy {
-        background: #F5F5F5;
+    &-copy_text {
+        background: $light_background;
         font-size: 12px;
         text-align: center;
         letter-spacing: 0.3px;
         color: $dark_background;
         padding: 13px 0;
     }
-
 }
