@@ -318,8 +318,9 @@
 }
 
 .main_footer {
+    $fon_footer: #445162;
     &-contacts {
-        background: #445162;
+        background: $fon_footer;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -337,46 +338,61 @@
     &-form {
         margin: 0 45px 0 0;
         display: flex;
-        flex-direction: column;
-        width: 503px;
-
+        flex-wrap: wrap;
+        width: 500px;
+        justify-content: center;
     }
 
-    &-form_input {
-        font-size: 16px;
-        line-height: 24px;
-        color: #445162;
-        padding: 10px 0 6px 10px;
-        margin: 0 0 18px 0;
+    &-form_input, 
+    &-form_message {
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        margin: 0 0 20px 0;
         border-radius: 5px;
-        border: none;
+        border: 1px solid $fon_footer;
     }
 
     &-form_message {
+        height: 170px;
+        resize: none;
+    }
+
+    &-form_input[placeholder], 
+    &-form_message[placeholder] {
+        color:  $fon_footer;
         font-size: 16px;
         line-height: 24px;
-        color: #445162;
-        padding: 10px 0 6px 10px;
-        height: 173px;
-        border-radius: 5px;
-        margin: 0 0 18px 0;
+        text-align: left;
+    }
+
+    &-form_input:hover, 
+    &-form_message:hover,
+    &-form_submit:hover {
+        background-color: lighten($fon_footer, 35%);
+        color: #fff;
+    }
+
+    &-form_input:hover::placeholder, 
+    &-form_message:hover::placeholder {
+        color: #fff;
     }
 
     &-form_submit {
-        width: 143px;
-        padding: 12px 0 7px 0;
+        width: 140px;
+        height: 40px;
+        border: 1px solid $fon_footer;
+        border-radius: 5px;
+        background: #fff;
         text-align: center;
-        align-self: center;
         margin: 0 0 61px 0;
         font-weight: bold;
         font-size: 16px;
         line-height: 24px;
         text-transform: uppercase;
         color: #445162;
-        border-radius: 5px;
-        border: none;
-        background: #fff;
     }
+
 
     &-copy {
         background: #F5F5F5;

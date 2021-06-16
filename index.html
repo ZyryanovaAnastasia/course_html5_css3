@@ -153,13 +153,13 @@
         <footer class="main_footer">
             <div class="main_footer-contacts">
                 <h2 class="main_footer-title">Contacts</h2>
-                <div class="main_footer-form">
-                    <input type="text" class="main_footer-form_input" placeholder="Your name:">
-                    <input type="text" class="main_footer-form_input" placeholder="Your email:">
+                <form class="main_footer-form">
+                    <input type="text" class="main_footer-form_input" placeholder="Your name:" required>
+                    <input type="email" class="main_footer-form_input" placeholder="Your email:" required>
                     <textarea class="main_footer-form_message" placeholder="Your message:"></textarea>
-                    <button class="main_footer-form_submit">Send</button>
-                </div>
-                <div class="social_network">
+                    <button class="main_footer-form_submit" type="submit">send</button>
+                </form>
+                <div class="main_footer-social_network">
                     <div class="social-links">
                         <a href="#">
                             <img src="img/skype_icon.svg" alt="here_your_login_skype"  title="here_your_login_skype" class="social-links_item">
