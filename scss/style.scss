@@ -385,67 +385,28 @@ ul {
     }
 
     &-link {
-        display: block;
+        display: flex;
         margin: 0 0 20px 0;
-        padding: 0 0 0 30px;
-        position: relative;
         color: #FFFFFF;
-    }
-
-    &-link:last-of-type {
-        margin: 0 0 50px 0;
-    }
-
-    &-link:before {
-        @include content_before(20px, 20px);
-        @include background_img('');
-    }
-      
-    &-link:nth-of-type(1)::before  {
-        background-image: url(../img/skype_icon.svg);
-    }
-      
-    &-link:nth-of-type(2)::before {
-        background-image: url(../img/icq_icon.svg);
-    }
-    
-    &-link:nth-of-type(3)::before  {
-        background-image: url(../img/email_icon.svg);
-    }
-      
-    &-link:nth-of-type(4)::before {
-        background-image: url(../img/bx_bx-phone.svg);
-    }
-
-    &-link:hover {
-        color: $lighten_dark_background;
     }
     
     &-social_logo {
+        margin: 50px 0 0;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
     }
 
+    &-link_svg,
     &-social_logo-net {
-        width: 51px;
-        height: 51px;
-        @include background_img('');
+        fill: #FFFFFF;
+        margin: 0 5px 0 0;
     }
 
-    &-social_logo-net:nth-of-type(1)  {
-        background-image: url(../img/twitter.svg);
-    }
-      
-    &-social_logo-net:nth-of-type(2) {
-        background-image: url(../img/vk.svg);
-    }
-    
-    &-social_logo-net:nth-of-type(3)  {
-        background-image: url(../img/google.svg);
-    }
-      
-    &-social_logo-net:nth-of-type(4) {
-        background-image: url(../img/facebook.svg);
+    &-link:hover,
+    &-link_svg:hover,
+    &-social_logo-net:hover  {
+        color: $lighten_dark_background;
+        fill: $lighten_dark_background;
     }
 
     &-copy_text {
