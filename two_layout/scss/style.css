@@ -18,8 +18,8 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: grey;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/backgroundHeader.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/backgroundHeader.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url(../img/backgroundHeader.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../img/backgroundHeader.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -46,7 +46,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px auto 250px;
+  margin: 40px auto 280px;
 }
 
 .main_header .navbar-logo {
@@ -74,11 +74,11 @@
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 32px 0 0;
+  margin: 0 50px 0 0;
 }
 
 .main_header .navbar-menu_item {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 30px 0 0;
 }
 
@@ -119,12 +119,53 @@
 }
 
 .main_header .carusel {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
+  margin: 0 25px;
+}
+
+.main_header .carusel_txt {
+  text-align: center;
+  width: 590px;
+  margin: 0 350px 320px;
+}
+
+.main_header .carusel_txt h3 {
+  font-size: 38px;
+}
+
+.main_header .carusel_txt h2 {
+  font-size: 58px;
+  margin: 0 0 15px 0;
+}
+
+.main_header .carusel_txt p {
+  font-size: 18px;
+  margin: 0 0 51px 0;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.main_header .carusel_txt button {
+  background-color: #998675;
+  text-transform: uppercase;
+  padding: 18px 39px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 3px solid #736357;
+}
+
+.main_header .carusel_switch {
+  width: 50px;
+  height: 80px;
+  margin: 100px 0 0 0;
 }
 /*# sourceMappingURL=style.css.map */
