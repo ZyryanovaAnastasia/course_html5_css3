@@ -126,13 +126,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 25px;
 }
 
 .main_header .carusel_txt {
   text-align: center;
   width: 590px;
-  margin: 0 350px 320px;
+  margin: 0 460px;
 }
 
 .main_header .carusel_txt h3 {
@@ -163,9 +165,62 @@
   border-bottom: 3px solid #736357;
 }
 
+.main_header .carusel_txt button:hover {
+  background-color: #d0bea9;
+}
+
 .main_header .carusel_switch {
+  display: block;
   width: 50px;
-  height: 80px;
-  margin: 100px 0 0 0;
+  height: 50px;
+  margin: 120px 0 0 0;
+  border: none;
+  background: none;
+  border-top: 2px solid #A2A19F;
+  border-right: 2px solid #A2A19F;
+}
+
+.main_header .carusel .switch-rigth {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.main_header .carusel .switch-left {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.main_header .carusel_switch:hover {
+  border-top: 2px solid #C7B299;
+  border-right: 2px solid #C7B299;
+  color: #C7B299;
+}
+
+.main_header .carusel_pagination {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 320px 0 40px;
+}
+
+.main_header .carusel_pagination-item {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #8E8F90;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.main_header .carusel_pagination-item:hover {
+  background-color: transparent;
+  border: 1px solid #C7B299;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 /*# sourceMappingURL=style.css.map */
