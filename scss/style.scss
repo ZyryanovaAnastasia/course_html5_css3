@@ -74,6 +74,7 @@ ul {
         position: relative;
         padding-left: 20px;
         color: #FFFFFF;
+        font-size: 20px;
     }
 
     &-list_item::before {
@@ -121,7 +122,7 @@ ul {
 
 .pluses_product {
     background: $light_background;
-    padding: 25px 50px 14px 50px;
+    padding: 25px 50px 0 50px;
 
     &-title {
         @extend %title_h2;
@@ -135,14 +136,14 @@ ul {
     }
 
     &-list_item {
-        width: 568px;
-        margin: 0 0 35px 0;
+        width: 580px;
+        margin: 0 0 33px 0;
         position: relative;
         padding-left: 45px;
     }
 
     &-list_item::before {
-        @include content_before(35px, 35px);
+        @include content_before(34px, 35px);
         content: "+";
         background-color: $dark_background;
         color: #fff;
@@ -153,7 +154,7 @@ ul {
 }
 
 .screenshots {
-    padding: 25px 50px 23px 50px;
+    padding: 25px 50px 10px 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -166,12 +167,12 @@ ul {
     &-item {
         width: 575px;
         display: flex;
-        margin: 0 0 27px 0;
+        margin: 0 0 25px 0;
     }
 
     &-item_img {
-        width: 202px;
-        height: 153px;
+        width: 200px;
+        height: 150px;
         background: $dark_background;
         margin: 0 14px 0 0;
     }
@@ -214,6 +215,7 @@ ul {
         width: 66px;
         height: 66px;
         border-radius: 50%;
+        margin: 5px 0 0 12px;
     }
 
     &-item_text {
@@ -279,12 +281,12 @@ ul {
         text-align: center;
         background: #FFFFFF;
         border: 2px solid #445162;
-        padding: 25px 0 16px 0;
+        padding: 25px 0 15px 0;
     }
 
     &-list {
         list-style-position: inside;
-        margin: 8px 8px 16px 20px;
+        margin: 8px 8px 0 20px;
     }
 
     &-list_item {
@@ -295,8 +297,8 @@ ul {
     &-button {
         background: #FFFFFF;
         width: 262px;
-        padding: 16px 0 9px 0;
-        margin: 14px 19px;
+        padding: 8px;
+        margin: 14px 19px 20px;
         font-size: 18px;
         font-weight: bold;
         color: #445161;
@@ -317,7 +319,7 @@ ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 25px 50px 60px 50px;
+        padding: 25px 50px 60px;
     }
 
     &-title {

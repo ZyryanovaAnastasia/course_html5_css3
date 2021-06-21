@@ -59,6 +59,7 @@ ul {
   position: relative;
   padding-left: 20px;
   color: #FFFFFF;
+  font-size: 20px;
 }
 
 .main_header-list_item::before {
@@ -117,7 +118,7 @@ ul {
 
 .pluses_product {
   background: #F5F5F5;
-  padding: 25px 50px 14px 50px;
+  padding: 25px 50px 0 50px;
 }
 
 .pluses_product-title {
@@ -136,8 +137,8 @@ ul {
 }
 
 .pluses_product-list_item {
-  width: 568px;
-  margin: 0 0 35px 0;
+  width: 580px;
+  margin: 0 0 33px 0;
   position: relative;
   padding-left: 45px;
 }
@@ -146,7 +147,7 @@ ul {
   content: "";
   display: block;
   position: absolute;
-  width: 35px;
+  width: 34px;
   height: 35px;
   top: 0;
   left: 0;
@@ -159,7 +160,7 @@ ul {
 }
 
 .screenshots {
-  padding: 25px 50px 23px 50px;
+  padding: 25px 50px 10px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,12 +180,12 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 27px 0;
+  margin: 0 0 25px 0;
 }
 
 .screenshots-item_img {
-  width: 202px;
-  height: 153px;
+  width: 200px;
+  height: 150px;
   background: #445162;
   margin: 0 14px 0 0;
 }
@@ -233,6 +234,7 @@ ul {
   width: 66px;
   height: 66px;
   border-radius: 50%;
+  margin: 5px 0 0 12px;
 }
 
 .reviews-item_text {
@@ -307,12 +309,12 @@ ul {
   text-align: center;
   background: #FFFFFF;
   border: 2px solid #445162;
-  padding: 25px 0 16px 0;
+  padding: 25px 0 15px 0;
 }
 
 .prices-list {
   list-style-position: inside;
-  margin: 8px 8px 16px 20px;
+  margin: 8px 8px 0 20px;
 }
 
 .prices-list_item {
@@ -323,8 +325,8 @@ ul {
 .prices-button {
   background: #FFFFFF;
   width: 262px;
-  padding: 16px 0 9px 0;
-  margin: 14px 19px;
+  padding: 8px;
+  margin: 14px 19px 20px;
   font-size: 18px;
   font-weight: bold;
   color: #445161;
@@ -347,7 +349,7 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 25px 50px 60px 50px;
+  padding: 25px 50px 60px;
 }
 
 .main_footer-title {
