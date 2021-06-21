@@ -4,6 +4,8 @@
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container {
@@ -15,8 +17,6 @@
 .main_header {
   background: #445161;
   padding: 25px 50px 19px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,8 +47,6 @@
   margin-bottom: 10px;
   position: relative;
   padding-left: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .main_header-list_item::before {
@@ -77,8 +75,6 @@
 
 .about_product {
   padding: 45px 50px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,8 +118,6 @@
 .pluses_product {
   background: #F5F5F5;
   padding: 25px 16px 14px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .pluses_product-title {
@@ -150,8 +144,6 @@
   margin: 0 35px 33px 0;
   position: relative;
   padding-left: 45px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .pluses_product-list_item::before {
@@ -171,8 +163,6 @@
 
 .screenshots {
   padding: 25px 50px 23px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,8 +215,6 @@
 .reviews {
   background: #F5F5F5;
   padding: 25px 50px 42px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,11 +251,9 @@
 .reviews-item_text {
   padding: 16px 10px 5px 15px;
   margin: 0 0 22px 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   background: #EBEBEB;
   border-radius: 5px;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #000000;
@@ -288,7 +274,7 @@
   display: block;
   margin: 10px 0 0 0;
   width: 100%;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #989898;
@@ -298,8 +284,6 @@
 
 .prices {
   padding: 45px 50px 36px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,8 +306,6 @@
 .prices-item {
   width: 300px;
   margin: 0 45px 0 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -ms-flex-item-align: end;
       align-self: flex-end;
   background: #445161;
@@ -351,8 +333,6 @@
   color: #445162;
   background: #FFFFFF;
   border: 2px solid #445162;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding: 25px 0 16px 0;
 }
 
@@ -402,49 +382,69 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 503px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 500px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.main_footer-form_input {
-  font-size: 16px;
-  line-height: 24px;
-  color: #445162;
-  padding: 10px 0 6px 10px;
-  margin: 0 0 18px 0;
+.main_footer-form_input, .main_footer-form_message {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin: 0 0 20px 0;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #445162;
 }
 
 .main_footer-form_message {
+  height: 170px;
+  resize: none;
+}
+
+.main_footer-form_input[placeholder], .main_footer-form_message[placeholder] {
+  color: #445162;
   font-size: 16px;
   line-height: 24px;
-  color: #445162;
-  padding: 10px 0 6px 10px;
-  height: 173px;
-  border-radius: 5px;
-  margin: 0 0 18px 0;
+  text-align: left;
+}
+
+.main_footer-form_input:hover, .main_footer-form_message:hover, .main_footer-form_submit:hover {
+  background-color: #9daabb;
+  color: #fff;
+}
+
+.main_footer-form_input:hover::-webkit-input-placeholder, .main_footer-form_message:hover::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.main_footer-form_input:hover:-ms-input-placeholder, .main_footer-form_message:hover:-ms-input-placeholder {
+  color: #fff;
+}
+
+.main_footer-form_input:hover::-ms-input-placeholder, .main_footer-form_message:hover::-ms-input-placeholder {
+  color: #fff;
+}
+
+.main_footer-form_input:hover::placeholder, .main_footer-form_message:hover::placeholder {
+  color: #fff;
 }
 
 .main_footer-form_submit {
-  width: 143px;
-  padding: 12px 0 7px 0;
+  width: 140px;
+  height: 40px;
+  border: 1px solid #445162;
+  border-radius: 5px;
+  background: #fff;
   text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   margin: 0 0 61px 0;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
   color: #445162;
-  border-radius: 5px;
-  border: none;
-  background: #fff;
 }
 
 .main_footer-copy {
