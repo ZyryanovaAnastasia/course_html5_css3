@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.main_header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: grey;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/backgroundHeader.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+    font-family: Raleway;
+    text-decoration: none;
+
+    a {
+        color: #FFFFFF;
+        font-family: Raleway;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #C7B299;
+    }
+    
+    .navbar {
+        display: flex;
+        text-transform: capitalize;
+        align-items: center;
+        margin: 40px auto 250px;
+    
+        &-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            width: 183px;
+            margin: 0 219px  0 0;
+        }
+    
+        &-svg {
+            fill: #FFFFFF;
+        }
+    
+        &-logo_txt {
+            font-size: 34px;
+        }
+        
+        &-menu_list {
+            display: flex;
+            list-style-type: none;
+            margin: 0 32px 0 0;
+        }
+    
+        &-menu_item {
+            font-size: 14px;
+            margin: 0 30px 0 0;
+        }
+    
+        &-btnCart, &-btnSearch {
+            border: none;
+            background: none;
+        }
+            
+        &-btnCart {
+            margin: 0 27px 0 0;
+        }
+        
+        &-svg:hover {
+            fill: #C7B299;
+        }
+
+        &-btnSearch {
+            width: 25px;
+            height: 25px;
+            outline: none;
+            background-image: url(../img/icon-search.svg);
+            background-repeat: no-repeat;
+            fill:#FFFFFF;
+        }
+          
+        &-btnSearch:focus {
+            width: 200px;
+            transition: width 1s ease-out;
+            background-position: left;
+            padding: 0 0 0 30px;
+            color: #FFFFFF;
+            background-color: #C7B299;
+        }
+
+        &-btnSearch:hover {
+            background-color: #C7B299;
+        }
+    }
+
+    .carusel {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    
+    }
+}
