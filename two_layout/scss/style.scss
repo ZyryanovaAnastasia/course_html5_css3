@@ -111,7 +111,7 @@
         &_txt {
             text-align: center;
             width: 590px;
-            margin: 0 460px;
+            margin: 0 380px;
 
             h3 {
                 font-size: 38px;
@@ -173,7 +173,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            margin: 320px 0 40px;
+            margin: 250px 0 40px;
         }
 
         &_pagination-item {
@@ -191,5 +191,59 @@
             border: 1px solid #C7B299;
             transform: scale(1.5);
         }
+    }
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 100px 0 80px;
+    background-color: #FFFFFF;
+
+    &_item {
+        width: 266px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 30px 0 0;
+    }
+
+    &_item:after {
+        content: "";
+        display: block;
+        width: 71px;
+        height: 4px;
+        background-color: #F1EEE9;
+        margin: 29px 0 0 0;
+    }
+    
+    &_item:hover &-icon, &_item:hover &-title, &_item:hover:after {
+        color: #C7B299;
+        fill: #C7B299;
+    }
+        
+    &_item:hover:after {
+        background-color: #C7B299;
+    }
+
+    &-icon {
+        display: flex;
+        fill: #555555;
+        margin: 0 0 30px 0;
+        width: 52px;
+        height: 50px;
+    }
+
+    &-title {
+        width: 100%;  
+        margin: 0 0 19px 0; 
+        font-size: 26px;
+    }
+
+    &-txt {
+        font-size: 18px;
+        color: #8C8C8C;
     }
 }
