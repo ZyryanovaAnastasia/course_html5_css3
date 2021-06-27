@@ -1,3 +1,52 @@
+@font-face {
+  font-family: 'raleway-regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Raleway/static/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'raleway-medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Raleway/static/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'raleway-semiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Raleway/static/Raleway-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'raleway-bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Raleway/static/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'raleway-extraBold';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Raleway/static/Raleway-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'montserrat-light';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: 'roboto-regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +58,11 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+}
+
+p {
+  font-family: 'raleway-regular', 'montserrat-ligth';
+  line-height: 1.5;
 }
 
 .main_header {
@@ -24,13 +78,11 @@
   background-repeat: no-repeat;
   background-position: center;
   color: #FFFFFF;
-  font-family: Raleway;
   text-decoration: none;
 }
 
 .main_header a {
   color: #FFFFFF;
-  font-family: Raleway;
   text-decoration: none;
 }
 
@@ -47,6 +99,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 40px auto 280px;
+  max-width: 1180px;
 }
 
 .main_header .navbar-logo {
@@ -67,6 +120,7 @@
 
 .main_header .navbar-logo_txt {
   font-size: 34px;
+  font-family: 'raleway-regular';
 }
 
 .main_header .navbar-menu_list {
@@ -74,11 +128,12 @@
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 50px 0 0;
+  margin: 0 40px 0 0;
 }
 
 .main_header .navbar-menu_item {
-  font-size: 16px;
+  font-family: 'raleway-medium', 'montserrat-light';
+  font-size: 14px;
   margin: 0 30px 0 0;
 }
 
@@ -138,17 +193,20 @@
 }
 
 .main_header .carusel_txt h3 {
-  font-size: 38px;
+  font-size: 36px;
+  font-family: 'raleway-medium';
 }
 
 .main_header .carusel_txt h2 {
-  font-size: 58px;
+  font-size: 52px;
+  font-family: 'raleway-extraBold';
   margin: 0 0 15px 0;
 }
 
 .main_header .carusel_txt p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0 0 51px 0;
+  padding: 0 10px;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -156,9 +214,10 @@
 
 .main_header .carusel_txt button {
   background-color: #998675;
+  font-family: 'raleway-extraBold';
   text-transform: uppercase;
+  font-size: 14px;
   padding: 18px 39px;
-  font-weight: bold;
   color: #FFFFFF;
   border-radius: 5px;
   border: none;
@@ -282,11 +341,13 @@
 .features-title {
   width: 100%;
   margin: 0 0 19px 0;
-  font-size: 26px;
+  font-family: 'raleway-semiBold', 'raleway-bold';
+  font-size: 22px;
+  color: #555555;
 }
 
 .features-txt {
-  font-size: 18px;
+  font-size: 14px;
   color: #8C8C8C;
 }
 /*# sourceMappingURL=style.css.map */

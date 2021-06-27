@@ -1,3 +1,53 @@
+@font-face {
+    font-family: 'raleway-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Raleway/static/Raleway-Regular.ttf"),
+}
+
+@font-face {
+    font-family: 'raleway-medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Raleway/static/Raleway-Medium.ttf"),
+}
+
+@font-face {
+    font-family: 'raleway-semiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Raleway/static/Raleway-SemiBold.ttf"),
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Raleway/static/Raleway-Bold.ttf"),
+}
+
+@font-face {
+    font-family: 'raleway-extraBold';
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/Raleway/static/Raleway-ExtraBold.ttf"),
+}
+
+@font-face {
+    font-family: 'montserrat-light';
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Montserrat/Montserrat-Light.ttf"),
+}
+
+@font-face {
+    font-family: 'roboto-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf"),
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +60,11 @@
     margin: 0 auto;
 }
 
+p {
+    font-family: 'raleway-regular', 'montserrat-ligth';
+    line-height: 1.5;
+}
+
 .main_header {
     display: flex;
     flex-wrap: wrap;
@@ -19,12 +74,10 @@
     background-repeat: no-repeat;
     background-position: center;
     color: #FFFFFF;
-    font-family: Raleway;
     text-decoration: none;
 
     a {
         color: #FFFFFF;
-        font-family: Raleway;
         text-decoration: none;
     }
 
@@ -37,6 +90,7 @@
         text-transform: capitalize;
         align-items: center;
         margin: 40px auto 280px;
+        max-width: 1180px;
     
         &-logo {
             display: flex;
@@ -52,16 +106,18 @@
     
         &-logo_txt {
             font-size: 34px;
+            font-family: 'raleway-regular';
         }
         
         &-menu_list {
             display: flex;
             list-style-type: none;
-            margin: 0 50px 0 0;
+            margin: 0 40px 0 0;
         }
     
         &-menu_item {
-            font-size: 16px;
+            font-family: 'raleway-medium', 'montserrat-light';
+            font-size: 14px;
             margin: 0 30px 0 0;
         }
     
@@ -114,25 +170,29 @@
             margin: 0 380px;
 
             h3 {
-                font-size: 38px;
+                font-size: 36px;
+                font-family: 'raleway-medium';
             }
     
             h2 {
-                font-size: 58px;
+                font-size: 52px;
+                font-family: 'raleway-extraBold';
                 margin: 0 0 15px 0;
             }
     
             p {
-                font-size: 18px;
+                font-size: 16px;
                 margin: 0 0 51px 0;
+                padding: 0 10px;
                 hyphens: auto;
             }
 
             button {
                 background-color: #998675;
+                font-family: 'raleway-extraBold';
                 text-transform: uppercase;
+                font-size: 14px;
                 padding: 18px 39px;
-                font-weight: bold;
                 color: #FFFFFF;
                 border-radius: 5px;
                 border: none;  
@@ -239,11 +299,13 @@
     &-title {
         width: 100%;  
         margin: 0 0 19px 0; 
-        font-size: 26px;
+        font-family: 'raleway-semiBold', 'raleway-bold';
+        font-size: 22px;
+        color: #555555
     }
 
     &-txt {
-        font-size: 18px;
+        font-size: 14px;
         color: #8C8C8C;
     }
 }
