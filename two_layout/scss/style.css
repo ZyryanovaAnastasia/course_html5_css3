@@ -66,6 +66,7 @@ p {
 }
 
 .main_header {
+  height: 100VH;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +80,9 @@ p {
   background-position: center;
   color: #FFFFFF;
   text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main_header a {
@@ -98,8 +102,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px auto 280px;
-  max-width: 1180px;
+  height: 10%;
 }
 
 .main_header .navbar-logo {
@@ -137,12 +140,12 @@ p {
   margin: 0 30px 0 0;
 }
 
-.main_header .navbar-btnCart, .main_header .navbar-btnSearch {
+.main_header .navbar-btn_cart, .main_header .navbar-btn_search {
   border: none;
   background: none;
 }
 
-.main_header .navbar-btnCart {
+.main_header .navbar-btn_cart {
   margin: 0 27px 0 0;
 }
 
@@ -150,7 +153,7 @@ p {
   fill: #C7B299;
 }
 
-.main_header .navbar-btnSearch {
+.main_header .navbar-btn_search {
   width: 25px;
   height: 25px;
   outline: none;
@@ -159,7 +162,7 @@ p {
   fill: #FFFFFF;
 }
 
-.main_header .navbar-btnSearch:focus {
+.main_header .navbar-btn_search:focus {
   width: 200px;
   -webkit-transition: width 1s ease-out;
   transition: width 1s ease-out;
@@ -169,7 +172,7 @@ p {
   background-color: #C7B299;
 }
 
-.main_header .navbar-btnSearch:hover {
+.main_header .navbar-btn_search:hover {
   background-color: #C7B299;
 }
 
@@ -178,18 +181,16 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 25px;
+  margin: 0 40px;
 }
 
 .main_header .carusel_txt {
   text-align: center;
   width: 590px;
-  margin: 0 380px;
 }
 
 .main_header .carusel_txt h3 {
@@ -263,7 +264,9 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 250px 0 40px;
+  margin: 0 0 40px 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .main_header .carusel_pagination-item {
