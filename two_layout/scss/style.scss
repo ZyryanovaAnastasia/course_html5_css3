@@ -774,3 +774,18 @@ p {
         }
     }
 }
+
+.partners {
+    padding: 0 $edge_padding;
+    background-color: black;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url(../img/partners/back_parners.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 490px;
+    &-item {
+        align-self: center;
+    }
+}
