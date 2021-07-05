@@ -1008,22 +1008,35 @@ p {
   font-size: 24px;
   line-height: 1.2;
   color: #ffffff;
-  margin: 0 0 30px 0;
+  margin: 30px 0 0 0;
 }
 
-.footer-content .footer_date {
+.footer-content .footer_article {
+  padding: 20px 0;
+  border-bottom: 2px solid #252525;
+}
+
+.footer-content .footer_article:last-child {
+  border: none;
+}
+
+.footer-content .footer_article_date {
   font-family: 'montserrat-light';
   font-size: 12px;
   line-height: 20px;
   color: #363636;
 }
 
-.footer-content .footer_article {
-  border-bottom: 2px solid #252525;
+.footer-content .footer_article_impotant_txt {
+  color: #00bff3;
 }
 
-.footer-content .footer_article:last-child {
-  border: none;
+.footer-content .footer_article:hover {
+  color: #c7b299;
+}
+
+.footer-content .footer_article:hover .footer_article_date {
+  color: #ffffff;
 }
 
 .footer-content-about_logo {
@@ -1037,6 +1050,7 @@ p {
   color: #d1d1d1;
   position: relative;
   text-decoration: none;
+  margin: 30px 0 0 0;
 }
 
 .footer-content-about-link_more:before {
@@ -1048,8 +1062,70 @@ p {
   left: 85px;
 }
 
+.footer-content-about-link_more:hover {
+  text-decoration: underline;
+}
+
+.footer-content-widget-list_tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-content-widget-list_tile-tile {
+  display: block;
+  width: 131px;
+  height: 99px;
+  margin: 4px;
+}
+
+.footer-content-widget-list_tile-tile:hover {
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
+}
+
 .footer-copy {
-  padding: 80px 100px;
+  padding: 45px 100px;
   background-color: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-copy-left, .footer-copy-right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-copy-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer-copy .footer_white_txt {
+  color: #959595;
+}
+
+.footer-copy .footer-copy-txt {
+  display: block;
+  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
+  border-right: 1px solid #252525;
+}
+
+.footer-copy .footer-copy-txt:last-child {
+  border: none;
+}
+
+.footer-copy .footer-copy-txt:hover, .footer-copy .footer-copy-txt:hover * {
+  color: #c7b299;
 }
 /*# sourceMappingURL=style.css.map */

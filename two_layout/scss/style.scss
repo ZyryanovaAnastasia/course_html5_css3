@@ -821,19 +821,29 @@ p {
             font-size: 24px;
             line-height: 1.2;
             color: #ffffff;
-            margin: 0 0 30px 0;
+            margin: 30px 0 0 0;
         }
-        .footer_date {
+        .footer_article {
+            padding: 20px 0;
+            border-bottom: 2px solid #252525;
+        }
+        .footer_article:last-child {
+            border: none;
+        }
+        .footer_article_date {
             font-family: 'montserrat-light';
             font-size: 12px;
             line-height: 20px;
             color: #363636;
         }
-        .footer_article {
-            border-bottom: 2px solid #252525;
+        .footer_article_impotant_txt {
+            color: #00bff3;
         }
-        .footer_article:last-child {
-            border: none;
+        .footer_article:hover {
+            color: #c7b299;
+        }
+        .footer_article:hover .footer_article_date{
+            color: #ffffff;
         }
         &-about {
             &_logo {
@@ -846,6 +856,7 @@ p {
                 color: #d1d1d1;
                 position: relative;
                 text-decoration: none;
+                margin: 30px 0 0 0;
             }
             &-link_more:before {
                 content: "";
@@ -855,10 +866,52 @@ p {
                 top: 6px;
                 left: 85px;
             }
+            &-link_more:hover {
+                text-decoration: underline;
+            }
+        }
+        &-widget {
+            &-list_tile {
+                display: flex;
+                flex-wrap: wrap;
+                &-tile {
+                    display: block;
+                    width: 131px;
+                    height: 99px;
+                    margin: 4px;
+                }
+                &-tile:hover {
+                    filter: brightness(40%);
+                }
+            }
         }
     }
     &-copy {
-        padding: $top_padding $edge_padding;
+        padding: 45px $edge_padding;
         background-color: #111111;
+        display: flex;
+        justify-content: space-between;
+        &-left, &-right {
+            width: 50%;
+            display: flex;
+        }
+        &-right {
+            justify-content: flex-end;
+        }
+        .footer_white_txt {
+            color: #959595;
+        }
+        .footer-copy-txt {
+            display: block;
+            margin: 0 10px 0 0;
+            padding: 0 10px 0 0;
+            border-right: 1px solid #252525;
+        }
+        .footer-copy-txt:last-child {
+            border: none;
+        }
+        .footer-copy-txt:hover, .footer-copy-txt:hover *{
+            color: #c7b299;
+        }
     }
 }
