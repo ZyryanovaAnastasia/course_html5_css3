@@ -100,6 +100,7 @@ p {
 
 .main_header {
     height: 100VH;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     background-color: grey;
@@ -122,6 +123,7 @@ p {
     
     .navbar {
         display: flex;
+        flex-wrap: wrap;
         text-transform: capitalize;
         align-items: center;
         height: 10%;
@@ -131,14 +133,15 @@ p {
             display: flex;
             align-items: center;
             text-decoration: none;
-            width: 183px;
             margin: 0 219px 0 0;
         }
     
         &-svg {
             fill: #FFFFFF;
         }
-        
+        &-menu_burger, &-menu_burger_btn {
+            display: none;
+        }
         &-menu_list {
             display: flex;
             list-style-type: none;
@@ -361,7 +364,7 @@ p {
 }
 
 .banner_buy {
-    height: 150px;
+    height: 20%;
     padding: 45px $edge_padding;
     background-color: #f4f5f8;
     background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
@@ -426,6 +429,7 @@ p {
         width: 370px;
         height: 340px;
         position: relative;
+        margin: 0 29px 29px 0;
         &-img {
             width: 370px;
             height: 237px; 
@@ -497,13 +501,6 @@ p {
         &:hover &-link, &:hover &-search {
             display: block;
         }
-    }
-
-    &-list_item:nth-child(1), &-list_item:nth-child(2) {
-        margin: 0 29px 29px 0;
-    }
-    &-list_item:nth-child(4), &-list_item:nth-child(5) {
-        margin: 0 29px 0 0;
     }
     &-btn_more {
         margin: 40px 0 0 0;
@@ -794,6 +791,7 @@ p {
     background-position: center;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     height: 490px;
     &-item {
         align-self: center;
@@ -912,6 +910,190 @@ p {
         }
         .footer-copy-txt:hover, .footer-copy-txt:hover *{
             color: #c7b299;
+        }
+    }
+}
+
+@media(max-width: 1100px) {
+    .navbar{
+        justify-content: center;
+        &-logo {
+            width: 100%;
+            margin: 0 0 15px 0 !important;
+            justify-content: center;
+        }
+    }
+    .your_ideas {
+        display: none;
+    }
+}
+
+@media(max-width:768px) {
+    $edge_padding: 25px;
+    $top_padding: 40px;
+    .main_header {
+        height: 150px;
+        .navbar {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &-logo {
+                width: 181px;
+            }
+            &-menu {
+                width: 30%;
+                height: 100%;
+                max-width: 640px;
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                &_list {
+                    visibility: hidden;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    margin: 0;
+                    right: 0;
+                    width: 50VH;
+                    height: 100VH;
+                    background-color: fade-out(#C0B199, 0.1);
+                    padding: 50px;
+                    transition-duration: .25s;
+                }
+                &_item {
+                    display: block;
+                    padding: 0 0 50px;
+                    font-size: 30px;
+                }
+                &_item:hover, &_item:focus {
+                    color: #362f2d;
+                }
+                &_burger_btn {
+                    display: flex;
+                    width: 70px;
+                    height: 70px;
+                    z-index: 1;
+                }
+                &_burger_btn span, &_burger_btn span:before, &_burger_btn span:after {
+                    display: block;
+                    margin: auto;
+                    width: 100%;
+                    height: 5px;
+                    background-color: #fff;
+                    position: relative;
+                    transition-duration: .50s;
+                }
+                &_burger_btn span {
+                    position: relative;
+                    top: 50%;
+                }
+                &_burger_btn span:before, &_burger_btn span:after {
+                    content: "";
+                    position: absolute;
+                }
+                &_burger_btn span:before {
+                    top: -15px;
+                }
+                &_burger_btn span:after {
+                    top: 15px;
+                }  
+                &_burger:checked ~ &_list {
+                    visibility: visible;
+                    height: auto;
+                }
+            }
+         }
+         #burger:checked ~ .navbar-menu_burger_btn > span {
+            width: 50px;
+            transform: rotate(45deg);
+        }
+        #burger:checked ~ .navbar-menu_burger_btn > span::before {
+            top: 0;
+            transform: rotate(0);
+        }
+        #burger:checked ~ .navbar-menu_burger_btn > span::after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+         #burger:checked ~ .navbar-menu_list {
+            visibility: visible;
+        }
+         .carusel {
+             display: none !important;
+         }
+    }
+    .features, .banner_buy, .projects, .counters, .blog, .partners, .footer-content, .footer-copy {
+        padding: $top_padding $edge_padding;
+    }
+    .features {
+        &_item {
+            margin: 0 10px 30px 0;
+        }
+    }
+    .banner_buy {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        div {
+            width: 100%;
+        }
+        &-btn {
+            margin: 40px 0 15px;
+        }
+    }
+    .mobile, .video {
+        display: none;
+    }
+    .counters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 576px) {
+    .projects {
+        &-menu {
+            flex-wrap: wrap;
+        }
+        &-list_item {
+            margin: 0 0 60px 0;
+        }
+    }
+    .partners {
+        height: 1052px;
+        flex-direction: column;
+    }
+    .counters {
+        display: grid;
+        padding: 50px 0;
+        grid-template-columns: 200px 200px;
+        &-card {
+            margin: 0 0 50px 0;
+        }
+        &-card:last-child {
+            grid-column: 1/3;
+        }
+    }
+    .blog {
+        &-list_article {
+            margin: 0;
+            margin: 0 0 60px 0;
+        }
+    }
+    .footer-content {
+        display: none;
+    }
+    .footer-copy {
+        flex-wrap: wrap;
+        &-left {
+            margin: 0 0 33px 0;
+        }
+        &-left, &-right {
+            width: 100%;
+            justify-content: space-around;
         }
     }
 }
